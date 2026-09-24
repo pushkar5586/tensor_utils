@@ -1,21 +1,30 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "utils"
 version = "0.1.0"
+description = "A running collection of reusable Python utilities for tensor analysis."
 authors = [
-  { name = "Pushkar Agrawal", email = "pushkar5586@gmail.com" }
+    { name = "Pushkar Agrawal", email = "pushkar5586@gmail.com" }
 ]
-description = "A collection of reusable Python utilities for tensor analysis."
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 license = { text = "MIT" }
-dependencies = [
-  # Add third-party packages required by your utilities, e.g.:
-  "numpy>=2.0.0",
+keywords = ["utilities", "decorators", "timing"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache License 2.0",
+    "Operating System :: OS Independent",
 ]
+dependencies = []
 
 [project.optional-dependencies]
-# dev = ["pytest", "ruff"]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.1.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
