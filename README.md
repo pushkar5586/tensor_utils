@@ -5,4 +5,4 @@ Personal Python utility functions for manipulating data tensors.
 ## Installation
 
 ```bash
-pip install git+[https://github.com/pushkar5586/tensor_utils.git](https://github.com/pushkar5586/tensor_utils.git)
+pip install git+https://github.com/pushkar5586/tensor_utils.git
