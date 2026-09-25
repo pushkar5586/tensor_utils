@@ -2,7 +2,7 @@ import numpy as np
 
 # Suppose we want the first k slices of the dimension at index 'i'
 # regardless of how many dimensions come before it.
-def get_subslice(arr, axis_index, k):
+def _get_subslice(arr, axis_index, k):
     if k > 0:
         # This dynamically builds a slice tuple
         slc = [slice(None)] * arr.ndim
@@ -40,7 +40,7 @@ def add_past_windows(\
     
     if A.shape[axis]-M.shape[axis] > 0:
         M_padding = np.zeros(M.shape)
-        M_padding = get_subslice(M_padding, axis_index=axis, k=A.shape[axis]-M.shape[axis])
+        M_padding = _get_subslice(M_padding, axis_index=axis, k=A.shape[axis]-M.shape[axis])
         M = np.concatenate(( M_padding, M), axis=axis)
     return M 
 
@@ -76,7 +76,7 @@ def add_future_windows(\
 
     if A.shape[axis]-M.shape[axis] > 0:
         M_padding = np.zeros(M.shape)
-        M_padding = get_subslice(M_padding, axis_index=axis, k=A.shape[axis]-M.shape[axis])
+        M_padding = _get_subslice(M_padding, axis_index=axis, k=A.shape[axis]-M.shape[axis])
         M = np.concatenate(( M, M_padding), axis=axis)
     return M
 
