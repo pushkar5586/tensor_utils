@@ -8,10 +8,6 @@ Personal Python utility functions for manipulating data tensors.
 pip install git+https://github.com/pushkar5586/tensor_utils.git
 ```
 
-## Documentation
-
-https://pushkar5586.github.io/tensor_utils/
-
 ## Quick example
 
 ```python
