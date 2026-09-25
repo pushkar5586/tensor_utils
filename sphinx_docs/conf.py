@@ -17,6 +17,7 @@ extensions = [
     "sphinx.ext.napoleon",     # lets autodoc understand Google/NumPy style docstrings
     "sphinx.ext.viewcode",     # adds a "view source" link per documented object
     "sphinx.ext.intersphinx",  # lets you link out to numpy's own docs by name
+    "sphinx.ext.mathjax",      # lets you write math equations in latex format
 ]
 
 # Napoleon settings: your docstrings are Google-style.

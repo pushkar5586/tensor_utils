@@ -57,7 +57,7 @@ def add_future_windows(\
     Args:
         A : a n-dimensional tensor.
         lb : the rolling windows size.
-        strict_lookaheadL If True, exclude the value at timestamp T from
+        strict_lookaheadL If True, exclude the value at timestamp T from 
             the rolling window constructed for time T.
         axis : the axis along which to compute the rolling window.
     
