@@ -1,2 +1,6 @@
 site
 site/*
+
+__pycache__
+
+sphinx_docs/_build/
