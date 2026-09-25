@@ -18,6 +18,10 @@ extensions = [
     "sphinx.ext.viewcode",     # adds a "view source" link per documented object
     "sphinx.ext.intersphinx",  # lets you link out to numpy's own docs by name
     "sphinx.ext.mathjax",      # lets you write math equations in latex format
+    "sphinx.ext.autosummary",  # it walks a package's actual folder structure and generates one page per
+                               # submodule/subpackage automatically, at any depth, without you hand-writing a 
+                               # directive per file. It's what NumPy, SciPy, and pandas use for this.
+    
 ]
 
 # Napoleon settings: your docstrings are Google-style.
@@ -25,10 +29,13 @@ napoleon_google_docstring = True
 napoleon_numpy_docstring = False
 napoleon_include_init_with_doc = True
 
+autosummary_generate = True  # build the per-module stub pages at build time
+
 # Show parameter/return types inline in the description rather than a
 # separate signature block — reads more like prose.
 autodoc_typehints = "description"
 autodoc_member_order = "bysource"
+
 
 intersphinx_mapping = {
     "numpy": ("https://numpy.org/doc/stable/", None),
