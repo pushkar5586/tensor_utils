@@ -4,3 +4,5 @@ site/*
 __pycache__
 
 sphinx_docs/_build/
+sphinx_docs/api/
+
