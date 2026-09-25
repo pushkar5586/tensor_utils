@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install sphinx furo
+      - run: pip install -e . sphinx furo
       - run: sphinx-build -b html sphinx_docs sphinx_docs/_build/html
       - uses: actions/upload-pages-artifact@v3
         with:
