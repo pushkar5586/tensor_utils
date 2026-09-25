@@ -18,16 +18,18 @@ def add_past_windows(\
         strict_lookback : bool,\
         axis : int = 0,\
     ) -> np.ndarray:
+    """Build a rolling window of past values along one axis of a tensor.
 
-    """
-        A : a n-dimensional tensor.
-        lb : the rolling windows size.
-        strict_lookback = True -> exclude the value at timestamp T from the rolling window constructed for time T.
-        axis : the axis along which to compute the rolling window.
+    Args:
+        A: An n-dimensional tensor.
+        lb: The rolling window size.
+        strict_lookback: If True, exclude the value at timestamp T from
+            the rolling window constructed for time T.
+        axis: The axis along which to compute the rolling window.
 
-
-        returns:
-            A_dimsxW : a (n+1)-dimensional tensor with the last dimension being the window's dimension
+    Returns:
+        An (n+1)-dimensional tensor, A_dimsxW, with the last dimension
+        being the window's dimension.
     """
 
     ## the length of M along the axis 'axis' will be reduced by 'lb-1'.
@@ -50,15 +52,18 @@ def add_future_windows(\
         axis : int = 0,\
     ) -> np.ndarray:
 
-    """
+    """Build a rolling window of future values along one axis of a tensor.
+
+    Args:
         A : a n-dimensional tensor.
         lb : the rolling windows size.
-        strict_lookahead = True -> exclude the value at timestamp T from the rolling window constructed for time T.
+        strict_lookaheadL If True, exclude the value at timestamp T from
+            the rolling window constructed for time T.
         axis : the axis along which to compute the rolling window.
-
-
-        returns:
-            A_dimsxW : a (n+1)-dimensional tensor with the last dimension being the window's dimension
+    
+    Returns:
+        An (n+1)-dimensional tensor, A_dimsxW, with the last dimension
+        being the window's dimension.
     """
 
     ## the length of M along the axis 'axis' will be reduced by 'lb-1'.
