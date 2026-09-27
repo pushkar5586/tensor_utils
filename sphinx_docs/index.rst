@@ -1,7 +1,7 @@
 tensor_utils
 ============
 
-Personal Python utility functions for manipulating data tensors.
+A Python utility for manipulating data tensors.
 
 Installation
 ------------
@@ -22,8 +22,9 @@ Quick example
    windows = add_past_windows(A, lb=3, strict_lookback=True)
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents
    
    examples/basic_usage.ipynb
+   examples/basic_usage2.ipynb
    api

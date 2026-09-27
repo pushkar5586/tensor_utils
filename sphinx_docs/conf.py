@@ -43,8 +43,9 @@ intersphinx_mapping = {
 }
 
 templates_path = ["_templates"]
-exclude_patterns = []
+exclude_patterns = ["_build"]
 
 html_theme = "furo"
 html_static_path = ["_static"]
 html_title = "tensor_utils"
+html_js_files = ["open_pdfs_in_new_tab.js"]

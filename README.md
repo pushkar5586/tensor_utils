@@ -18,4 +18,3 @@ A = np.arange(10)
 windows = add_past_windows(A, lb=3, strict_lookback=True)
 ```
 
-See the [API Reference](api.md) for the full function reference.
