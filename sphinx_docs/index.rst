@@ -24,5 +24,6 @@ Quick example
 .. toctree::
    :maxdepth: 2
    :caption: Contents
-
+   
+   examples/basic_usage.ipynb
    api

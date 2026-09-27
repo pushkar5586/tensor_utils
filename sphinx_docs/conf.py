@@ -21,7 +21,7 @@ extensions = [
     "sphinx.ext.autosummary",  # it walks a package's actual folder structure and generates one page per
                                # submodule/subpackage automatically, at any depth, without you hand-writing a 
                                # directive per file. It's what NumPy, SciPy, and pandas use for this.
-    
+    "nbsphinx",                # render .ipynb notebooks in Examples sections
 ]
 
 # Napoleon settings: your docstrings are Google-style.
@@ -30,6 +30,7 @@ napoleon_numpy_docstring = False
 napoleon_include_init_with_doc = True
 
 autosummary_generate = True  # build the per-module stub pages at build time
+nbsphinx_execute = "never"
 
 # Show parameter/return types inline in the description rather than a
 # separate signature block — reads more like prose.
